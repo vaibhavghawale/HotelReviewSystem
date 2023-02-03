@@ -16,23 +16,25 @@ public class HotelServiceImpl implements HotelService {
 	  @Autowired
 	  private HotelRepository hotelRepository;
 
-	@Override
-	public List<Hotel> getAllHotels() {
-		 return hotelRepository.findAll();
-    }
-
-	@Override
-	public Hotel getHotelByIdHotel(String id) {
-		
-		return hotelRepository.findById(id).orElseThrow(() -> new HotelNotFoundException("hotel with given id not found !!"));
-	}
-
-	@Override
-	public Hotel saveHotel(Hotel hotel) {
-		  String hotelId = UUID.randomUUID().toString();
-	      hotel.setId(hotelId);
-	      return hotelRepository.save(hotel);
-	}
+	  	@Override
+		public Hotel saveHotel(Hotel hotel) {
+		String randomhotelId = UUID.randomUUID().toString();
+		System.out.println(randomhotelId);
+		 hotel.setHotelid(randomhotelId);
+		   return hotelRepository.save(hotel);
+		}
+	  	
+	  	
+		@Override
+		public List<Hotel> getAllHotels() {
+			 return hotelRepository.findAll();
+	    }
+	
+		@Override
+		public Hotel getHotelByIdHotel(String id) {
+			
+			return hotelRepository.findById(id).orElseThrow(() -> new HotelNotFoundException("hotel with given id not found !!"));
+		}
 
 
 }
