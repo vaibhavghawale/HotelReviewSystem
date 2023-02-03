@@ -25,7 +25,7 @@ public class RatingController {
 	@Autowired
 	private RatingService ratingService;
 	
-	//create Ratin
+	//create Rating
 	
 	@PostMapping
 	public ResponseEntity<Rating> createRating(@RequestBody Rating rating){
