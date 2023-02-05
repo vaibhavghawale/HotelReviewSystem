@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import com.user.model.User;
 import com.user.service.UserService;
@@ -23,6 +24,10 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
+	//<------------------------------------XXXX---------------------------------------->
+	
+	// create a new user and generate new userId using Post method
+	
 	@PostMapping
 	public ResponseEntity<User> createUser(@RequestBody User user) {
 		
@@ -30,14 +35,23 @@ public class UserController {
 		
 		return ResponseEntity.status(HttpStatus.CREATED).body(user1);
 	}
+	//<--------------------------------------XXXX--------------------------------------->
 	
+	// Get single User by UserId 
 	
 	@GetMapping("/{userId}")
 	public ResponseEntity<User> getUser(@PathVariable String userId){
-		
 		User user= userService.getUser(userId);
+		
+		
 		return ResponseEntity.ok(user);
 	}
+	
+	
+	
+	//<-------------------------------------XXXX---------------------------------------->
+	
+	// Get List of All Users.  
 	
 	@GetMapping
 	public ResponseEntity<List<User>> getAllUser(){
@@ -48,5 +62,5 @@ public class UserController {
 		
 	}
 	
-	
+	//<--------------------------------------XXXX-------------------------------------->
 }
