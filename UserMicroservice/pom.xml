@@ -43,6 +43,8 @@
 		</dependency>
 		
 		
+		<!-- Additional dependancy for Eureka cloud for make a connection between one microservice to another -->
+		
 		<dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter</artifactId>
@@ -53,6 +55,12 @@
       <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
     </dependency>
 		
+		<!--Additional dependancy for frign client to use http client-->
+		
+	<dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-openfeign</artifactId>
+    </dependency>
 		
 	</dependencies>
 	

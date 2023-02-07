@@ -12,9 +12,9 @@ import lombok.Setter;
 
 public class Hotel {
 
-    private  String id;
-    private  String name;
-    private  String location;
-    private  String about;
+	   private  String hotelid;
+	   private  String name;
+	   private  String location;
+	   private  String about;
 
 }
