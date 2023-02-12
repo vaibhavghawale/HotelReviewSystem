@@ -30,6 +30,6 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
-    <fullyQualifiedTypeName name="com.user.external.services.HotelService"/>
     <fullyQualifiedTypeName name="com.user.model.Hotel"/>
+    <fullyQualifiedTypeName name="com.user.external.services.HotelService"/>
 </qualifiedTypeNameHistroy>

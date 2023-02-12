@@ -110,15 +110,15 @@ public class UserServiceImpl implements UserService {
 		   //<!-- Using ***REST TEMPLATE   we are going to call http client and get data from other Micro-services -------------------->
 			
 		    	
-		    	   	ResponseEntity<Hotel> forEntity =restTemplate.getForEntity("http://HOTEL-SERVICE/hotels/"+rating.getHotelId(), Hotel.class);
-					
-					Hotel hotel =forEntity.getBody(); 
+////		    	   	ResponseEntity<Hotel> forEntity =restTemplate.getForEntity("http://HOTEL-SERVICE/hotels/"+rating.getHotelId(), Hotel.class);
+//					
+////					Hotel hotel =forEntity.getBody(); 
 		    	
 		    	
 		   //<!-- Using ***FEIGN CLEINT   we are going to call http client and get data from other Micro-services -------------------->
 		    	//Inject Hotel Service First (@Autowired)
 		    	
-//		    	Hotel hotel =hotelService.getHotel(userId);
+		    	Hotel hotel =hotelService.getHotel(rating.getHotelId());
 								
 					rating.setHotel(hotel);
 					
