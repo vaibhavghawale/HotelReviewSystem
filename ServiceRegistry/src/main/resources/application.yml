@@ -1,8 +1,9 @@
+server:
+  port: 9001
+  
 eureka:
   instance:
     hostname: localhost
   client:
     register-with-eureka: false
     fetch-registry: false
-server:
-  port: 9001

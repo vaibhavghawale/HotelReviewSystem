@@ -1,2 +1,23 @@
 server:
-  port: 8086
+  port: 8085
+spring:
+  application:
+    name: CONFIG-SERVER
+
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/thecodervaibhav/Micro-service-configurations-
+          clone-on-start: true
+      
+      
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:9001/eureka
