@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,10 +28,11 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
-	//<------------------------------------XXXX---------------------------------------->
+	//<-----------------------------------------------XXXX--------------------------------------------------------->
 	
 	// create a new user and generate new userId using Post method
 	
+	@PreAuthorize("hasAuthority('SCOPE_internal') || hasAuthority('Admin')")
 	@PostMapping
 	public ResponseEntity<User> createUser(@RequestBody User user) {
 		
@@ -38,11 +40,14 @@ public class UserController {
 		
 		return ResponseEntity.status(HttpStatus.CREATED).body(user1);
 	}
-	//<--------------------------------------XXXX--------------------------------------->
+	//<------------------------------------------------XXXX-------------------------------------------------------->
 	
 	// Get single User by UserId 
 	// this method is depend on the hotel and rating service if any one is down then we did not get proper output so we use here circuit breaker for managing request 
 	
+	
+	
+	@PreAuthorize("hasAuthority('SCOPE_internal') || hasAuthority('Admin')")
 	@GetMapping("/{userId}")
 //  @CircuitBreaker(name = "ratingHotelBreaker", fallbackMethod = "ratingHotelFallback")
 //  @Retry(name = "ratingHotelService", fallbackMethod = "ratingHotelFallback")
@@ -58,6 +63,7 @@ public class UserController {
 	
 	//fallback method for crircuit breaker 
 	
+	
 	 public ResponseEntity<User> ratingHotelFallback(String userId, Exception ex) {
 
        ex.printStackTrace();
@@ -71,10 +77,12 @@ public class UserController {
 	
 	
 	
-	//<-------------------------------------XXXX---------------------------------------->
+	//<-------------------------------------XXXX------------------------------------------------------------------->
 	
+	 
 	// Get List of All Users.  
 	
+	@PreAuthorize("hasAuthority('Admin')")	 	//spring security authenticate
 	@GetMapping
 	public ResponseEntity<List<User>> getAllUser(){
 		
@@ -84,5 +92,5 @@ public class UserController {
 		
 	}
 	
-	//<--------------------------------------XXXX-------------------------------------->
+	//<----------------------------------------------------XXXX---------------------------------------------------->
 }
