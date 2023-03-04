@@ -28,3 +28,14 @@ spring:
         predicates:
         - Path=/ratings/**
 
+
+# OKTA authentications
+
+okta:
+  oauth2:
+    issuer: https://dev-14541509.okta.com/oauth2/default      # this will give us from okta web side check API security→ ApI → default → issuer
+    audience: api://default
+    client-id: 0oa8kafc4jcgV8l2a5d7                           #check in application in ockta client and wiil be there
+    client-secret: fQ7NsT5L-Ei8xZujzZYMTlDtPBlF9CFe53JkGKZY   #just below client id we get secrete 
+    scopes: openid, profile, email, offline_access            #this are scopes 
+

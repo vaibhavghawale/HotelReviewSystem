@@ -17,6 +17,9 @@ import org.springframework.web.client.RestTemplate;
 import com.user.model.User;
 import com.user.service.UserService;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
+
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -38,14 +41,33 @@ public class UserController {
 	//<--------------------------------------XXXX--------------------------------------->
 	
 	// Get single User by UserId 
+	// this method is depend on the hotel and rating service if any one is down then we did not get proper output so we use here circuit breaker for managing request 
 	
 	@GetMapping("/{userId}")
+//  @CircuitBreaker(name = "ratingHotelBreaker", fallbackMethod = "ratingHotelFallback")
+//  @Retry(name = "ratingHotelService", fallbackMethod = "ratingHotelFallback")
+	@RateLimiter(name = "userRateLimiter", fallbackMethod = "ratingHotelFallback")
 	public ResponseEntity<User> getUser(@PathVariable String userId){
+
 		User user= userService.getUser(userId);
-		
-		
+
 		return ResponseEntity.ok(user);
 	}
+	
+	
+	
+	//fallback method for crircuit breaker 
+	
+	 public ResponseEntity<User> ratingHotelFallback(String userId, Exception ex) {
+
+       ex.printStackTrace();
+       
+       //All data is dummy if any service is down and request hiting on server using builder we can set all dummy data.
+       
+       User user = User.builder().email("dummy@gmail.com").name("Dummy").about("This user is created dummy because some service is down").userid("141234").build();
+       return new ResponseEntity<>(user, HttpStatus.BAD_REQUEST);
+   }
+	
 	
 	
 	
