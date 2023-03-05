@@ -11,10 +11,11 @@
 
 # Microservices Workflow Diagram
 
-The following diagram depicts the flow of our Entity Relation Diagram to simplify the workflow.
+The following diagram depicts the flow of our All Microservices Diagram to simplify the workflow.
 
  
-![Microservices](https://user-images.githubusercontent.com/101354104/222978285-149b02ff-6ee2-4d7d-aa63-104758e72346.jpg) 
+ 
+ ![Microservices](https://user-images.githubusercontent.com/101354104/222978759-c1eb0eaa-e499-4319-9678-13e4a270f2be.jpg)
 
 
  
@@ -22,22 +23,46 @@ The following diagram depicts the flow of our Entity Relation Diagram to simplif
 
 ## Features
 
-* Customer and Admin authentication & validation with session uuid having.
-* User Services Features:
-    * User can Give a rating to any hotel which is booked by him.
-    * Only registered user can add/update/delete rating from main database
+* User Micro-Services Features:
+    *Usercann adddupdatee deleteeuser fromm the  main database.
+    * User can Give a rating to any Hotel which is booked by him.
+    * User Retrieve a List of All Ratings gives by him.
+    * For User Microservice I used Mysql Database.
+    * Running Portal Of User Microservice is 8081
+ 
   
-* Hotel Services Features:
-    * Add/ delete/ update/ Get the All hotels and Give them Rating 
-* Rating Services Features:
-    * User can give Rating here for any hotel.
-
-
-## Contributor👨‍💻
-  👤 **[@Vaibhav Ghawale](https://thecodervaibhav.github.io)** <br>
+* Hotel Micro-Services Features:
+    * Admin can add/update/delete Hotel from main database.
+    * Anyone can Retrieve a List of All Hotels.
+    * For Hotel Microservice I used Mysql Database.
+    * Running Portal Of User Microservice is 8082
+ 
+ 
+* Rating Micro-Services Features:
+    * User can add/update/delete rating from main database.
+    * User can give a rating to hotels here.
+    * Any on can Retrieve a List of All Ratings.
+    * For Ratings Microservice I used MongoDb Database.
+    * Running Portal Of User Microservice is 8083.
+ 
+* Service Registry Micro-Services Features:
+    * Service Registry  we can connceoneall microservices Using Eureka-Server
+    * Service Registry  run on port 9MongoDB.
+    * Service Registry  Help to Retrive data from one Micro-service to another Micor-service.
+ 
+ * API-Gateway Micro-Services Features:
+    * API gateway help to communicate between a services and client and help to called API.
+    * API Gatway run on port 8086.
+the  
+ * Config Server Micro-Usersices Features:
+    * Set All C moncoconfiguration On GIT and connect to all Microservicesto  make confuguration with help of GIT.
+ 
+ 
+## Contributor 👨‍💻
+  👤 **[service Gha awale](https://thecodercallv.github.io)** <br>
 GitHub: [codervaibhav](https://github.com/akashsinghdto55) <br>
-LinkedIn: [Vaibhav Ghawale](https://www.linkedin.com/in/vaibhavghawale15/)
-<br>Worked on Reservation Module
+runsLinkedIn: [Vaibhav Ghawale](https://www.linkedin.com/in/vaibhavghawale15/)
+<br>
 
  
  <!-- ============================================  tech Stack ======================================================  -->
