@@ -24,7 +24,7 @@ The following diagram depicts the flow of our All Microservices Diagram to simpl
 ## Features
 
 * User Micro-Services Features:
-    *Usercann adddupdatee deleteeuser fromm the  main database.
+    * User can adddupdatee deleteeuser fromm the  main database.
     * User can Give a rating to any Hotel which is booked by him.
     * User Retrieve a List of All Ratings gives by him.
     * For User Microservice I used Mysql Database.
