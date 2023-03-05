@@ -12,18 +12,13 @@
 # Microservices Workflow Diagram
 
 The following diagram depicts the flow of our Entity Relation Diagram to simplify the workflow.
-<br>
- ![Microservices](https://user-images.githubusercontent.com/101354104/222978285-149b02ff-6ee2-4d7d-aa63-104758e72346.jpg)
- 
- 
-<br>
 
-<!-- ============================================  DETAILS ======================================================  -->
-
+ 
+![Microservices](https://user-images.githubusercontent.com/101354104/222978285-149b02ff-6ee2-4d7d-aa63-104758e72346.jpg) 
 
 
  
-<!-- ============================================  FEATURES ======================================================  --
+ <!-- ============================================  Features ======================================================  -->
 
 ## Features
 
@@ -38,12 +33,14 @@ The following diagram depicts the flow of our Entity Relation Diagram to simplif
     * User can give Rating here for any hotel.
 
 
-## Contributors👨‍💻
+## Contributor👨‍💻
   👤 **[@Vaibhav Ghawale](https://thecodervaibhav.github.io)** <br>
 GitHub: [codervaibhav](https://github.com/akashsinghdto55) <br>
 LinkedIn: [Vaibhav Ghawale](https://www.linkedin.com/in/vaibhavghawale15/)
 <br>Worked on Reservation Module
 
+ 
+ <!-- ============================================  tech Stack ======================================================  -->
 
 ## Tech Stack
 
