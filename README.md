@@ -21,7 +21,7 @@ The following diagram depicts the flow of our All Microservices Diagram to simpl
  
  <!-- ============================================  Features ======================================================  -->
 
-## Features
+## Modules And Features
 
 * User Micro-Services Features:
     * User can adddupdatee deleteeuser fromm the  main database.
@@ -82,5 +82,7 @@ runsLinkedIn: [Vaibhav Ghawale](https://www.linkedin.com/in/vaibhavghawale15/)
 * Spring Security (OKTA Auth)
 
 <!-- ============================================  MODULES ======================================================  -->
+![serviceq](https://user-images.githubusercontent.com/101354104/222984144-0969637a-f78a-409f-bf1c-af4be94548e4.jpg)
+![servicess](https://user-images.githubusercontent.com/101354104/222984152-c4d14d2d-f3b9-4da6-a2a2-4b07ae0c69bd.jpg)
 
-## Modules
+
