@@ -59,7 +59,7 @@ the
  
  
 ## Contributor 👨‍💻
-  👤 **[service Gha awale](https://thecodercallv.github.io)** <br>
+  👤 **[Vaibhav Ghawale](https://thecodercallv.github.io)** <br>
 GitHub: [codervaibhav](https://github.com/akashsinghdto55) <br>
 runsLinkedIn: [Vaibhav Ghawale](https://www.linkedin.com/in/vaibhavghawale15/)
 <br>
